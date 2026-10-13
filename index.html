@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tea Time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Corner decals (always pinned to the window edges) -->
+  <img class="decal tl" src="decals/ready/tl.png" alt="">
+  <img class="decal tr" src="decals/ready/tr.png" alt="">
+  <img class="decal bl" src="decals/ready/bl.png" alt="">
+  <img class="decal br" src="decals/ready/br.png" alt="">
+
+  <!-- Everything below is laid out on a 16:9 stage that scales to fit the window -->
+  <main id="stage" class="stage">
+    <h1 class="title">Tea Time</h1>
+
+    <img class="el flower" src="elements/center_flower.png" alt="A flower on a tray">
+    <img class="el cup" src="elements/cup.png" alt="">
+    <img class="el spoon" src="elements/spoon.png" alt="">
+
+    <!-- Kettle: the water rises as each pop-up is opened for the first time -->
+    <div id="kettle" class="el kettle">
+      <img src="elements/kettle.png" alt="Kettle">
+      <svg viewBox="0 0 666 375" aria-hidden="true">
+        <defs>
+          <clipPath id="kettle-body">
+            <polygon points="158,185 155,189 153,193 151,197 150,201 150,205 149,209 149,213 149,217 149,221 149,225 149,229 149,233 149,237 150,241 150,245 151,249 152,253 154,257 156,261 158,265 161,269 164,273 168,277 172,281 178,285 185,289 196,294 200,297 262,297 266,293 276,289 284,285 289,281 294,277 298,273 301,269 304,265 306,261 308,257 310,253 315,249 323,245 328,241 331,237 334,233 335,229 337,225 338,221 338,217 338,213 338,209 338,205 338,201 337,197 336,193 335,189 335,185"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#kettle-body)">
+          <rect class="water" x="140" y="185" width="210" height="113"/>
+        </g>
+        <g class="steam" transform="translate(95 100) scale(1.3)">
+          <path d="M85 40 q-10 -12 0 -24 q10 -12 0 -24"/>
+          <path d="M105 36 q-10 -12 0 -24 q10 -12 0 -24"/>
+          <path d="M125 40 q-10 -12 0 -24 q10 -12 0 -24"/>
+        </g>
+      </svg>
+    </div>
+
+    <div id="kettle-ui" class="kettle-ui">
+      <button id="brew-btn" class="pill brew-btn" hidden>Brew your tea.</button>
+      <p id="kettle-count" class="kettle-count" aria-live="polite"></p>
+    </div>
+
+    <!-- Clickable buttons are added by script.js -->
+    <div id="hotspots"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
