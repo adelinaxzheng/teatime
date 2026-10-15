@@ -60,14 +60,18 @@ const EXTRAS = [
     id: "history", name: "Brief History", color: "#d9b98a",
     x: 1710, y: 730,
     fields: [
-      ["", "Legend says Emperor Shennong discovered tea around 2737 BCE, when leaves blew into his pot of boiling water."],
+      ["", "All types of tea comes from the Camellia sinensis plant"],
+      ["", "Discovered in 2737 BC in ancient China"],
+      ["", "Global expansion via trade in the 17th century"],
     ],
   },
   {
-    id: "funfact", name: "Fun Fact", color: "#e6c86e",
+    id: "funfact", name: "Fun Facts", color: "#e6c86e",
     x: 1700, y: 450,
     fields: [
-      ["", "White, green, oolong, black and pu-erh all come from the same plant, Camellia sinensis. Only the processing differs!"],
+      ["", "Accidentally discovered when tea leaves drifted into a pot of boiling water"],
+      ["", "World's second-most consumed beverage after water"],
+      ["", "Kept in a locked chest in the 18th century because of value"],
     ],
   },
 ];
